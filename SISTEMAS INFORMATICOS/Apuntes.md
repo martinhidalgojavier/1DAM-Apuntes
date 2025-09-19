@@ -4,6 +4,8 @@ Todas las rutas en linux llevan una "/"
 
 ## Comandos:
 
+clear ___ limpia la terminal
+
 sudo ___ realizar acciones como administrador
 
 sudo su ___ da permisos de root
@@ -37,3 +39,6 @@ chmod 777 ___ da permisos totales
 mv ___ mueve o renombra
 
 echo ___ imprime texto
+
+(comando) --help ___ te da info sobre ese comando
+
