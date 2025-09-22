@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<instituto>
+
+
+    <clase>
+        <alumno>
+            <nombre>Pedro</nombre>
+            <edad>14</edad>
+            <notaMedia>7</notaMedia>
+        </alumno>
+
+    </clase>
+
+    <clase>
+        <alumno>
+            <nombre>Carlos </nombre>
+            <edad>13</edad>
+            <notaMedia>9</notaMedia>
+        </alumno>
+    </clase>
+
+    <clase>
+        <alumno>
+            <nombre>Carlos </nombre>
+            <edad>15</edad>
+            <notaMedia>8</notaMedia>
+        </alumno>
+    </clase>
+
+
+</instituto>
