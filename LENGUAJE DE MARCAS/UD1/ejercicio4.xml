@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<recetas>
+    
+    <receta>
+        <nombre>papasHuevo</nombre>
+        <ingredientes>patatas y huevo</ingredientes>
+        <tiempoPreparacion>40</tiempoPreparacion>
+    </receta>
+
+    <receta>
+        <nombre>migas</nombre>
+        <ingredientes>pan rallado y chorizo</ingredientes>
+        <tiempoPreparacion>30</tiempoPreparacion>
+
+    </receta>
+
+</recetas>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<alumnos>
+    
+    <alumno>
+        <nombre>Carlos </nombre>
+        <apellido>Alcaraz</apellido>
+        <edad>22</edad>
+        <email>carlitos@gmail.com</email>
+    </alumno>
+
+    <alumno>
+        <nombre>Rafael</nombre>
+        <apellido>Nadal</apellido>
+        <edad>40</edad>
+        <email>rnadal@gmail.com</email>
+    </alumno>
+
+    <alumno>
+        <nombre>Novak</nombre>
+        <apellido>Djokovic</apellido>
+        <edad>42</edad>
+        <email>ndjoco@gmail.com</email>
+    </alumno>
+
+</alumnos>
