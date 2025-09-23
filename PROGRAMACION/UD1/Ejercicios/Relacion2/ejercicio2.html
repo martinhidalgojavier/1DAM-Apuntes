@@ -5,11 +5,11 @@
 
 
     //creamos las variables y solicitamos datos al usuario
-    let totalCuenta = parseInt(prompt("¿Cuanto te ha costado la cuenta? "))
-    let porcentaje = parseInt(prompt("¿Que porcentaje de propina quieres dejar? "))
-    
+    let totalCuenta = parseFloat(prompt("¿Cuanto te ha costado la cuenta? "))
+    let porcentaje = parseFloat(prompt("¿Que porcentaje de propina quieres dejar? "))
+
     //hacemos el calculo
-    let propina = (totalCuenta * porcentaje) / 100
+    let propina = totalCuenta * (porcentaje / 100)
 
     //mostramos resultado
     console.log("La propina a dejar es " + propina + "€");
