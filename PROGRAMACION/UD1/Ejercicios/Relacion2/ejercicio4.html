@@ -1,12 +1,16 @@
 <script>
-//Cálculo de Tiempo Restante
-//Pregunta al usuario su edad y calcula 
-// cuántos días le quedan para cumplir 80 años (usa una estimación de días)
+    //Cálculo de Tiempo Restante
+    //Pregunta al usuario su edad y calcula 
+    // cuántos días le quedan para cumplir 80 años (usa una estimación de días)
 
 
-//creamos las variables y pedimos datos
+    //creamos las variables y pedimos datos
 
-let edadUsuario 
+    let edadUsuario = 365 * parseInt(prompt("¿Cuantos años tienes? "))
+    let ochenta = 80 * 365
 
+    //hacemos los calculos y mostramos
+
+    console.log("Te faltan " + (ochenta - edadUsuario) + " dias para cumplir 80 años");
 
 </script>
