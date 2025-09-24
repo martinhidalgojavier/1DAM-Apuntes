@@ -10,6 +10,11 @@
             <edad>14</edad>
             <notaMedia>7</notaMedia>
         </alumno>
+        <alumno>
+            <nombre>Fernando</nombre>
+            <edad>16</edad>
+            <notaMedia>5</notaMedia>
+        </alumno>
 
     </clase>
 
