@@ -1,7 +1,14 @@
 <script>
-//Determinar si un número está en un rango:
-//Solicita un número e indica si está entre 10 y 20 (inclusive).
+    //Determinar si un número está en un rango:
+    //Solicita un número e indica si está entre 10 y 20 (inclusive).
 
-let numero
+    //pedimos info al usuario y creamos variables
+    let numeroUsuario = Number(prompt("Dime un numero: "))
 
+    if (numeroUsuario >= 10 && numeroUsuario <= 20) {
+        console.log("tu numero esta entre el 10 y el 20");
+    } else {
+        console.log("tu numero esta fuera del rango 10-20");
+
+    }
 </script>
