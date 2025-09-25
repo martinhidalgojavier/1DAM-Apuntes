@@ -14,8 +14,8 @@
             <tipo>electrico</tipo>
             <nivel>50</nivel>
         </pokemon>
-
     </entrenador>
+
     <entrenador>
         <nombre>paco</nombre>
         <pokemon>
@@ -29,7 +29,5 @@
             <nivel>50</nivel>
         </pokemon>
     </entrenador>
-
-
-
+    
 </liga>
