@@ -1,0 +1,25 @@
+<script>
+    // Simular una calculadora simple
+    // Pide dos números y una operación (`+`, `-`, `*`, `/`) e imprime el resultado correspondiente.
+
+    //pedimos informacion y creamos variables
+
+    let numero1 = Number(prompt("dime un numero: "))
+    let numero2 = Number(prompt("dime un segundo numero: "))
+    let operacion = (prompt("¿que operacion quieres que haga?(introduce el simbolo): "))
+
+    // hacemos el calculo y mostramos por pantalla
+    
+    if (operacion == "+") {
+        resultado = numero1 + numero2
+    } else if (operacion == "-") {
+        resultado = numero1 - numero2
+    } else if (operacion == "*") {
+        resultado = numero1 * numero2
+    } else if (operacion == "/") {
+        resultado = numero1 / numero2
+    } else {
+        console.log("Operador incorrecto")
+    }
+
+</script>
