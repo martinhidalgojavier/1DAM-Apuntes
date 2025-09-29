@@ -4,9 +4,24 @@
     //Si el número introducido no es de dos cifras, se debe avisar al usuario.
 
     //creamos la variables y pedimos datos
-    let numeroUsuario = Number(prompt("introduce un numero:"))
+    let numeroUsuario = Number(prompt("introduce un numero de dos digitos:"))
     
+    let mensaje = ""
 
+    // if (numero1/10 >= 1 && numero1/10 < 10){
+    // ¿Qué pasa con los números negativos? En este código no lo hemos tenido en cuenta.
+
+    if (numero >= 10 && numero <= 99) {
+        // Creamos las variables dentro del if, porque solo se van a utilizar si el número tiene dos cifras.
+        let digitoDecenas = parseInt(numero / 10)
+        let digitoUnidades = numero % 10
+        let suma = digitoDecenas + digitoUnidades
+        mensaje = "El número tiene dos cifras, la suma de sus cifras es: " + suma
+    } else {
+        mensaje = "El número no tiene dos cifras"
+    }
+
+    console.log(mensaje)
 
 
 </script>
