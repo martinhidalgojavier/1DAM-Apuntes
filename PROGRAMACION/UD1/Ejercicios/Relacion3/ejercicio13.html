@@ -1,0 +1,21 @@
+<script>//Determinar si un carácter es vocal o consonante
+    //Pide una letra al usuario e 
+    //indica si es una vocal (`a`, `e`, `i`, `o`, `u`) o una consonante.
+
+    let letraUsuario = prompt("Dime una letra: ")
+    letraUsuario = letraUsuario.toLowerCase()
+    let mensaje = ""
+
+    if (letraUsuario == "a" ||
+        letraUsuario == "e" ||
+        letraUsuario == "i" ||
+        letraUsuario == "o" ||
+        letraUsuario == "u") {
+        mensaje = "Tu letra es una vocal "
+    } else {
+        mensaje = "Tu letra es una consonante "
+    }
+    console.log(mensaje);
+
+
+</script>
