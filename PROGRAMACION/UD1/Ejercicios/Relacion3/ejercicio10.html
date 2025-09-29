@@ -1,0 +1,31 @@
+<script>
+    //Calificación de un examen
+    //Pide al usuario su calificación (entre 0 y 100) y devuelve su letra correspondiente:
+    //- A (90-100).
+    //- B (80-89).
+    //- C (70-79).
+    //- D (60-69).
+    //- F (0-59).
+
+    //creamos las variables
+    let calificacion = Number(prompt("Dime tu calificacion del 1 al 100"))
+    let mensaje = ""
+    //guardamos mensaje en vacio para que cada vez nos devuelva lo que queramos
+    //y asi queda mas limpio
+
+    if (calificacion >= 90 && calificacion <= 100) {
+        mensaje = "Tu calificacion es A "
+    } else if (calificacion >= 80 && calificacion <= 89) {
+        mensaje = "Tu calificacion es B"
+    } else if (calificacion >= 70 && calificacion <= 79) {
+        mensaje = "Tu calificacion es C"
+    } else if (calificacion >= 60 && calificacion <= 69) {
+        mensaje = "Tu calificacion es D"
+    } else {
+        mensaje = "Tu calificacion es F"
+    }
+
+    //Solo nos queda mostrar resultado
+    console.log(mensaje)
+
+</script>
