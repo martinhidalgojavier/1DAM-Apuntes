@@ -10,23 +10,23 @@
             <nivel>50</nivel>
         </pokemon>
         <pokemon>
-            <nombre>pikachu</nombre>
-            <tipo>electrico</tipo>
-            <nivel>50</nivel>
+            <nombre>charmander</nombre>
+            <tipo>fuego</tipo>
+            <nivel>60</nivel>
         </pokemon>
     </entrenador>
 
     <entrenador>
-        <nombre>paco</nombre>
+        <nombre>migue</nombre>
         <pokemon>
-            <nombre>pikachu</nombre>
-            <tipo>electrico</tipo>
-            <nivel>50</nivel>
+            <nombre>charizard</nombre>
+            <tipo>fuego</tipo>
+            <nivel>42</nivel>
         </pokemon>
         <pokemon>
-            <nombre>pikachu</nombre>
-            <tipo>electrico</tipo>
-            <nivel>50</nivel>
+            <nombre>pidgeotto</nombre>
+            <tipo>volador</tipo>
+            <nivel>65</nivel>
         </pokemon>
     </entrenador>
     
