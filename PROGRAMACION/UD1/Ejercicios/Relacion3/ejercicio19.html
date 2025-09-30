@@ -1,0 +1,20 @@
+<script>//Cálculo de coste de estacionamiento
+    //Pide al usuario el tiempo que estuvo estacionado (en horas) y calcula el coste:
+    //- Primeras 2 horas: 5€ cada hora.
+    //- De 2 a 5 horas: 4€ cada hora.
+    //- Más de 5 horas: 3€ cada hora adicional.
+
+    let tiempoParking = Number(prompt("Cuantas horas has estado aparcado?: "))
+    let mensaje = ""
+
+     if (tiempoParking <= 2) {
+        mensaje = "El parking te costará 5€ por hora"
+    } else if (tiempoParking > 2 && tiempoParking <= 5) {
+        mensaje = "El parking te costará 4€ por hora"
+    } else {
+        mensaje = "El parking te costará 3€ por hora"
+    }
+
+    console.log(mensaje);
+
+</script>
