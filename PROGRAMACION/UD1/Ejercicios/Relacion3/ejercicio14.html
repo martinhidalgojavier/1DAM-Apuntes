@@ -10,9 +10,9 @@
 
     if (climateUser <= 0) {
         mensaje = "La temperatura es muy fria "
-    } else if (climateUser >= 0 && climateUser <= 15) {
+    } else if (climateUser > 0 && climateUser <= 15) {
         mensaje = "La temperatura es fria"
-    } else if (climateUser >= 16 && climateUser <= 25) {
+    } else if (climateUser > 15 && climateUser <= 25) {
         mensaje = "La temperatura es templada"
     } else {
         mensaje = "La temperatura es caliente"
