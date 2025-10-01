@@ -1,0 +1,16 @@
+<script>
+
+let userNumber = Number(prompt("introduce un numero entero del 1 al 10:"))
+
+if (userNumber < 1 && userNumber > 10) {
+    console.log("No estas introduciendo un numero del 1 al 10");
+    
+} else {
+for (let i = 0; i < 10; i++) {
+    let calculo = userNumber * (i + 1)
+    console.log( userNumber + " X " + (i + 1) + " = "+  calculo);
+      
+}
+}
+
+</script>
