@@ -4,17 +4,23 @@
     //- De 2 a 5 horas: 4€ cada hora.
     //- Más de 5 horas: 3€ cada hora adicional.
 
-    let tiempoParking = Number(prompt("Cuantas horas has estado aparcado?: "))
-    let mensaje = ""
+    // Guardamos el tiempo preguntado en una variable de horas.
+    let horasEstacionado = parseFloat(prompt("Ingrese el tiempo que estuvo estacionado en horas."))
+    let costeTotal
 
-     if (tiempoParking <= 2) {
-        mensaje = "El parking te costará 5€ por hora"
-    } else if (tiempoParking > 2 && tiempoParking <= 5) {
-        mensaje = "El parking te costará 4€ por hora"
+    // Declaramos operaciones.
+    let pagoPrimerasDosTotal = 10
+    let pagoIntervaloDosCinco = 12
+    let pagoMasDeDos = (horasEstacionado - 2) * 4
+    let pagoMasDeCincoAdicional = (horasEstacionado - 5) * 3
+
+    // Condicionales para dar respuesta.
+    if (horasEstacionado <= 2) {
+        costeTotal = horasEstacionado * 5
+    } else if (horasEstacionado > 2 && horasEstacionado <= 5) {
+        costeTotal = pagoPrimerasDosTotal + pagoMasDeDos
     } else {
-        mensaje = "El parking te costará 3€ por hora"
+        costeTotal = pagoPrimerasDosTotal + pagoIntervaloDosCinco + pagoMasDeCincoAdicional
     }
-
-    console.log(mensaje);
-
+    console.log("Usted tiene que hacer un pago de " + costeTotal + "€.")
 </script>
