@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio6.xsd">
+    <productos codigo="A101">
+        <producto>
+            <id></id>
+            <nombre></nombre>
+            <categoria></categoria>
+            <precio></precio>
+            <stock></stock>
+        </producto>
+    </productos>
+</inventario>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Inventario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="productos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="producto">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                     
+                                        <xs:element name="nombre" />
+                                        <xs:element name="categoria">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Periférico" />
+                                                    <xs:enumeration value="Ordenador" />
+                                                    <xs:enumeration value="Movil" />
+                                                    <xs:enumeration value="Accesorio" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="precio" />
+                                        <xs:element name="stock" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
