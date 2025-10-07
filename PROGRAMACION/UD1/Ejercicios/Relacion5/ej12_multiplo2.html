@@ -1,0 +1,24 @@
+<script>//2.-
+    //Solicitar un número entero. Mostrar el siguiente número 
+    //múltiplo de 2 a partir del número. 
+
+    let numero = prompt("Introduce un número entero:")
+    let entrada = numero
+    numero = Number(numero)
+
+    numero++ // numero = numero + 1 o numero += 1
+
+    console.log("Busco a partir del " + numero)
+
+    while (numero % 2 != 0) {
+        numero++
+        console.log("Estoy dentro del while. Numero vale: " + numero)
+    }
+
+    console.log("While finalizado")
+    console.log("El siguiente numero multiplo de dos despues del " + entrada + " es el " + numero)
+
+
+
+
+</script>
