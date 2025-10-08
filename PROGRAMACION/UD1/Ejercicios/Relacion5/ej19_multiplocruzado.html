@@ -1,0 +1,21 @@
+<script>//19.- Solicitar dos números enteros. Mostrar el siguiente número 
+    //múltiplo del primer número introducido, a partir del segundo número introducido
+
+
+
+
+    let numeroMultiplo = Number(prompt("Introduce un número multiplo para buscar:"))
+    let numeroBuscar = Number(prompt("Introduce un número a partir del cual buscar:"))
+    let numeroOriginal = numeroBuscar
+
+    numeroBuscar++ // numeroBuscar = numeroBuscar + 1 o numeroBuscar += 1
+
+
+    while (numeroBuscar % numeroMultiplo != 0) {
+        numeroBuscar++       
+    }
+
+    console.log("El siguiente numero multiplo de " + numeroMultiplo
+        + " despues del " + numeroOriginal + " es el " + numeroBuscar)
+
+</script>
