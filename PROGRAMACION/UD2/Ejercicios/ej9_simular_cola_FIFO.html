@@ -1,0 +1,20 @@
+<script>
+    //9. Simulación de una cola (FIFO)
+
+    let cola = []
+    cola.push("cliente1", "cliente2", "cliente3")
+    console.log(cola)
+
+    let clienteAtendido = cola.shift()
+    console.log("he atendido a " + clienteAtendido);
+    console.log("clientes restantes: " + cola);
+
+    clienteAtendido = cola.shift()
+    console.log("he atendido a " + clienteAtendido);
+    console.log("clientes restantes: " + cola);
+
+    clienteAtendido = cola.shift()
+    console.log("he atendido a " + clienteAtendido);
+    console.log("clientes restantes: " + cola);
+
+</script>
