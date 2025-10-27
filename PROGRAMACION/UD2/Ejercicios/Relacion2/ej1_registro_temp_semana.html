@@ -1,0 +1,57 @@
+<script> //1. Registro de Temperatura Diaria
+
+    //Escribe un programa que permita al usuario ingresar 
+    //las temperaturas registradas durante una semana (7 días).
+
+    //creo el array vacio
+    //creo la variable de los dias de la semana
+    let temperaturaSemana = []
+    const NUMERODIASSEMANA = 7
+
+    //creamos un bucle para los 7 dias y asi no hacer 7 prompts
+    for (let i = 0; i < NUMERODIASSEMANA; i++) {
+
+        //hacemos push al array de cada respuesta del usuario
+        temperaturaSemana.push(prompt("Dime las temperaturas del dia " + i));
+    }
+
+    // creamos un bucle que continue X veces mientras que el usuario no indique "4"
+
+    //creamos las 4 variables de las opciones del menú
+    const OPCIONTEMPERATURAMAX = 1
+    const OPCIONTEMPERATURAMIN = 2
+    const OPCIONTEMPERATURAMEDIA = 3
+    const OPCIONSALIR = 4
+
+    //mostramos al usuario las opciones
+    console.log("1. Mostrar la temperatura más alta registrada.");
+    console.log("2. Mostrar la temperatura más baja registrada.");
+    console.log("3. Calcular la temperatura media de la semana.");
+    console.log("4. Salir");
+
+    //creamos variable de lo que elige el usuario
+    let eleccionUsuario = Number(prompt("Elige una opcion: "))
+
+    //mientras que la opcion del usuario no sea 4:
+    while (eleccionUsuario != OPCIONSALIR) {
+
+        if (eleccionUsuario == 1) {
+            let temperaturaMax = temperaturaSemana[0]
+            for (let i = 0; i < NUMERODIASSEMANA; i++) {
+
+                if (temperaturaSemana[i] > temperaturaMax) {
+                    
+                    console.log("La temperatura maxima es la del dia: " + temperaturaMax);
+                }
+                
+
+            }
+
+
+        }
+        eleccionUsuario = Number(prompt("Elige una opcion: "))
+
+    }
+    console.log("fin del programa");
+
+</script>
