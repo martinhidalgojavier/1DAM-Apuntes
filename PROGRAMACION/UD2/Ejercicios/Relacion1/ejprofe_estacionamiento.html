@@ -1,0 +1,22 @@
+<script>
+
+    let estacionamiento = []
+
+    let numeroFilas = Number(prompt("Dime un numero de filas: "))
+    let numeroColumnas = Number(prompt("Dime un numero de columnas: "))
+    let filaActual = []
+
+    for (let i = 0; i < numeroFilas; i++) {
+        filaActual = []
+
+        for (let j = 0; j < numeroColumnas; j++) {
+            filaActual.push(i +"-"+ j)
+        }
+        estacionamiento.push(filaActual)
+        
+    }
+    
+    console.log(estacionamiento);
+    
+
+</script>
