@@ -1,0 +1,50 @@
+<script>
+
+    //creo arrays
+    const NOMBREJUGADORES = ["Pelé","Topuria","maradona","pique","CR7"]
+    const PUNTUACIONJUGADORES = [50,11,100,1,3000]
+
+    //creo constantes de opciones del menu
+    const OPCIONANIADIR = 1
+    const OPCIONMOSTRAR = 2
+    const OPCIONSALIR = 3
+
+    //mostramos al usuario las opciones
+    console.log("1. AÑADIR JUGADOR Y PUNTUACION.");
+    console.log("2. Mostrar JUGADORES Y PUNTUACION.");
+    console.log("3. Salir");
+
+    //creamos variable de lo que elige el usuario
+    let eleccionUsuario = Number(prompt("Elige una opcion: "))
+
+    //mientras que la opcion del usuario no sea 3:
+    while (eleccionUsuario != OPCIONSALIR) {
+
+
+        if (eleccionUsuario == OPCIONANIADIR) {
+
+            NOMBREJUGADORES.push(prompt("Dime tu nombre: "));
+            PUNTUACIONJUGADORES.push(Number(prompt("Dime tu puntuación: ")))
+            NOMBREJUGADORES.shift()
+            PUNTUACIONJUGADORES.shift()
+        }
+
+        if (eleccionUsuario == OPCIONMOSTRAR) {
+            console.log(NOMBREJUGADORES);
+            console.log(PUNTUACIONJUGADORES);
+
+            console.log("LISTA DE JUGADORES Y PUNTUACIÓN:");
+            for (let i = 0; i < NOMBREJUGADORES.length; i++) {
+                console.log(NOMBREJUGADORES[i] + " - "+ PUNTUACIONJUGADORES[i]);
+            }
+        }
+
+        //¡¡¡¡¡¡IMPORTANTE ESTO PARA QUE NO ENTREMOS A BUCLE INFINITO!!!!!!
+        eleccionUsuario = Number(prompt("Elige una opcion: "))
+
+    }
+
+    console.log("FIN DEL PROGRAMA");
+
+
+</script>
