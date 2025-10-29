@@ -10,31 +10,67 @@
 
 <body>
     <header>
+        <figure>
+            <img src="img/logo.png" width="120" height="120">
+        </figure>
         <h1>AquaExpress</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre nosotros</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li>Elemento4</li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#imagenes">Imagenes</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section>
-            <h2>Sobre nosotros</h2>
-            <p>
-                Este es un <i>ejemplo</i> de cómo <br> estructurar una página web utilizando HTML.
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>Este es un <i>ejemplo</i> de cómo <br> estructurar una página web utilizando HTML.
             </p>
             <hr>
+            <p>este "hr" es para hacer la linea que hay encima</p>
+            <br>
+
             <blockquote>
                 "Este es un <b>ejemplo</b> de una <strong>cita larga </strong>. "
             </blockquote>
-            <a href="https://www.renfe.com/es/es" target="_blank">Enlace a Renfe</a>
-            <a href="mailto:a@a.com">Correo a A</a>
+            <br>
+        </section>
+
+        <section id="imagenes">
+            <h2>imagenes</h2>
+            <br>
+            <figure>
+                <img src="img/logo.png" width="120" height="120">
+                <figcaption>esta seria la descripcion</figcaption>
+                <img src="img/logo.png" width="120" height="120">
+                <figcaption>esta seria la descripcion</figcaption>
+                <img src="img/logo.png" width="120" height="120">
+                <figcaption>esta seria la descripcion</figcaption>
+                <img src="img/logo.png" width="120" height="120">
+                <figcaption>esta seria la descripcion</figcaption>
+            </figure>
+            <br>
+
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <ul>
+                <li>Bob</li>
+                <li>Claire</li>
+                <li>Alexander</li>
+            </ul>
+            <br>
         </section>
     </main>
+
+
     <footer>
+
+        <a href="https://www.renfe.com/es/es" target="_blank">Enlace a Renfe</a>
+        <a href="mailto:a@a.com">Enlace a correo</a>
         <p>&copy; 2024 Mi página web. Todos los derechos reservados.</p>
     </footer>
 </body>
