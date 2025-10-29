@@ -1,12 +1,9 @@
 <mxfile host="65bd71144e">
     <diagram id="pOwEDaTtwzO-6ecy52zt" name="Page-1">
-        <mxGraphModel dx="1175" dy="926" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+        <mxGraphModel dx="1040" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="ENCENDIDO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="358.5" y="430" width="103" height="40" as="geometry"/>
-                </mxCell>
                 <mxCell id="3" value="COMPROBACION SENSORES Y FUNCIONAMIENTO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="351.75" y="510" width="116.5" height="50" as="geometry"/>
                 </mxCell>
@@ -26,20 +23,17 @@
                     <mxGeometry x="350" y="910" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="SI" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-                    <mxGeometry x="370" y="1060" width="80" height="80" as="geometry"/>
+                    <mxGeometry x="370" y="1020" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="ELEGIR MODO DE CAFE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="350" y="1200" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="11" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="2">
+                <mxCell id="11" value="" style="endArrow=none;html=1;entryX=0.5;entryY=0.5;entryDx=0;entryDy=15;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="3" target="21">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="508" y="550" as="sourcePoint"/>
-                        <mxPoint x="558" y="500" as="targetPoint"/>
+                        <mxPoint x="410.0000000000002" y="470" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="12" value="" style="endArrow=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="7">
+                <mxCell id="12" value="" style="endArrow=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="21" target="7">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="420" y="540" as="sourcePoint"/>
+                        <mxPoint x="461.5" y="450" as="sourcePoint"/>
                         <mxPoint x="417" y="480" as="targetPoint"/>
                         <Array as="points">
                             <mxPoint x="718" y="450"/>
@@ -91,11 +85,17 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="20" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="10" target="9">
+                <mxCell id="20" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=-25;exitPerimeter=0;" edge="1" parent="1" source="22" target="9">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="420" y="980" as="sourcePoint"/>
+                        <mxPoint x="410" y="1200" as="sourcePoint"/>
                         <mxPoint x="428" y="1070" as="targetPoint"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="&lt;font color=&quot;#121212&quot;&gt;&lt;span style=&quot;background-color: rgb(211, 213, 214);&quot;&gt;ENCENDIDO&lt;/span&gt;&lt;/font&gt;" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" vertex="1" parent="1">
+                    <mxGeometry x="360" y="430" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="ELEGIR MODO DE CAFE" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" vertex="1" parent="1">
+                    <mxGeometry x="345" y="1150" width="130" height="50" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
