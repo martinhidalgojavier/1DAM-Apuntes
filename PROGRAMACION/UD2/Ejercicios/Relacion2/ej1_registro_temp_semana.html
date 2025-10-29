@@ -12,12 +12,12 @@
     for (let i = 0; i < NUMERODIASSEMANA; i++) {
 
         //hacemos push al array de cada respuesta del usuario
-        temperaturaSemana.push(prompt("Dime las temperaturas del dia " + i));
+        temperaturaSemana.push(Number(prompt("Dime las temperaturas del dia " + i)));
     }
 
     // creamos un bucle que continue X veces mientras que el usuario no indique "4"
 
-    //creamos las 4 variables de las opciones del menú
+    //creamos las 4 constantes de las opciones del menú
     const OPCIONTEMPERATURAMAX = 1
     const OPCIONTEMPERATURAMIN = 2
     const OPCIONTEMPERATURAMEDIA = 3
@@ -40,16 +40,45 @@
             for (let i = 0; i < NUMERODIASSEMANA; i++) {
 
                 if (temperaturaSemana[i] > temperaturaMax) {
-                    
-                    console.log("La temperatura maxima es la del dia: " + temperaturaMax);
+
+                    temperaturaMax = temperaturaSemana[i]
+
                 }
-                
-
             }
+            console.log("La temperatura maxima es " + temperaturaMax);
+        }
+        else if (eleccionUsuario == 2) {
+            let temperaturaMin = temperaturaSemana[0]
+            for (let i = 0; i < NUMERODIASSEMANA; i++) {
 
+                if (temperaturaSemana[i] < temperaturaMin) {
+
+                    temperaturaMin = temperaturaSemana[i]
+
+                }
+            }
+            console.log("La temperatura minima es " + temperaturaMin);
+        }
+        else if (eleccionUsuario == 3) {
+
+            let sumaTemperaturas = 0
+            let mediaTemperatura = 0
+
+            for (let i = 0; i < NUMERODIASSEMANA; i++) {
+                sumaTemperaturas += temperaturaSemana[i]
+            }
+            mediaTemperatura = (sumaTemperaturas / NUMERODIASSEMANA)
+            console.log("La temperatura media de la semana es: " + mediaTemperatura.toFixed(2));
 
         }
+
+        console.log("1. Mostrar la temperatura más alta registrada.");
+        console.log("2. Mostrar la temperatura más baja registrada.");
+        console.log("3. Calcular la temperatura media de la semana.");
+        console.log("4. Salir");
+
         eleccionUsuario = Number(prompt("Elige una opcion: "))
+
 
     }
     console.log("fin del programa");
