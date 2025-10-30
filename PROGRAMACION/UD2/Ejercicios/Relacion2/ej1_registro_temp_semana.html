@@ -23,6 +23,8 @@
     const OPCIONTEMPERATURAMEDIA = 3
     const OPCIONSALIR = 4
 
+    let temperaturaMax =0
+
     //mostramos al usuario las opciones
     console.log("1. Mostrar la temperatura más alta registrada.");
     console.log("2. Mostrar la temperatura más baja registrada.");
@@ -36,7 +38,7 @@
     while (eleccionUsuario != OPCIONSALIR) {
 
         if (eleccionUsuario == 1) {
-            let temperaturaMax = temperaturaSemana[0]
+             temperaturaMax = temperaturaSemana[0]
             for (let i = 0; i < NUMERODIASSEMANA; i++) {
 
                 if (temperaturaSemana[i] > temperaturaMax) {
