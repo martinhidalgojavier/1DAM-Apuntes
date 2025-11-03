@@ -1,14 +1,17 @@
 <script>
 
     //creo arrays
-    const PRODUCTOS = ["Queso", "Maiz", "Tomate", "Harina", "Patata", "Pollo", "Pimiento", "Pan", "Manzana", "Platano"]
+    const PRODUCTOS = ["QUESO", "MAIZ", "TOMATE", "HARINA", "PATATA", "POLLO", "PIMIENTO", "PAN", "MANZANA", "PLATANO"]
     const PRECIOS = [11, 3, 2, 6, 7, 12, 4, 1, 8, 5]
     const TODOSPRODUCTOS = PRODUCTOS.length
 
-    let eleccionProducto
-    let eleccionCantidad
+    let eleccionProducto = ""
+    let eleccionCantidad = 0
     let listaCompra = []
-    let precioListaCompra = []
+    let cantidadProductos = []
+    let precioListaCompra = 0
+    let totalPrecioProducto = 0
+    let existeProducto = false
 
     for (let i = 0; i < TODOSPRODUCTOS; i++) {
 
@@ -16,15 +19,52 @@
     }
 
     while (eleccionProducto != "FIN") {
-        
-    eleccionProducto = prompt("Elige un producto: ").toUpperCase()
-    eleccionCantidad = (prompt("Que cantidad quieres? : "))
 
-    if (eleccionProducto != "FIN") {
-        
+        eleccionProducto = prompt("Elige un producto: ")
+        eleccionProducto = eleccionProducto.toUpperCase()
+        existeProducto = false
+        if (eleccionProducto != "FIN") {
+
+            eleccionCantidad = (Number(prompt("Que cantidad quieres? : ")))
+
+            if (eleccionCantidad > 0 && eleccionCantidad < 30) {
+
+
+                for (let i = 0; i < TODOSPRODUCTOS; i++) {
+
+                    if (eleccionProducto == PRODUCTOS[i]) {
+                        existeProducto = true
+
+                        listaCompra.push(eleccionProducto)
+                        cantidadProductos.push(eleccionCantidad)
+                        totalPrecioProducto = (eleccionCantidad * PRECIOS[i])
+                        precioListaCompra += totalPrecioProducto
+
+
+                    }
+
+                }
+                if (existeProducto == false) {
+
+                    console.log("EL PRODUCTO " + eleccionProducto + " NO LO TENEMOS");
+                }
+
+            } else {
+                console.log("Debes escoger una cantidad entre 0 y 30 unidades! ");
+
+            }
+        }
     }
 
-}
+    console.log("RESUMEN:");
+
+    for (let i = 0; i < listaCompra.length; i++) {
+        console.log(listaCompra[i] + " - " + cantidadProductos[i] + " unidades.");
+
+    }
+
+    console.log("Precio total de su compra: " + precioListaCompra + " €");
+
 
 
 
