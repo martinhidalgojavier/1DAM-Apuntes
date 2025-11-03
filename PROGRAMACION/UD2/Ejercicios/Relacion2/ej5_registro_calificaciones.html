@@ -1,0 +1,98 @@
+<script>
+
+    let estudiantes = ["paco", "alex", "fran", "pepe", "toni"]
+    let calificacion = [4, 6, 5, 7, 9]
+
+    const OPCIONNUEVOESTUDIANTE = 1
+    const OPCIONMEDIA = 2
+    const OPCIONNOTAMAX = 3
+    const OPCIONNOTAMIN = 4
+    const OPCIONSALIR = 5
+    
+    let nombreNuevoAlumno
+    let notaNuevoAlumno
+    let existeAlumno = false
+    let sumaCalificaciones = 0
+    let mediaCalificaciones = 0
+    let NombreEstudianteMax
+    let NombreEstudianteMin
+    let calificacionMax
+    let calificacionMin
+
+    console.log("1. AÑADIR ESTUDIANTE Y CALIFICACION.");
+    console.log("2. MOSTRAR MEDIA DE LA CLASE.");
+    console.log("3. CALIFICACION MAS ALTA");
+    console.log("4. CALIFICACION MAS BAJA");
+    console.log("5. SALIR");
+
+    opcionUsuario = Number(prompt("Elige una opcion: "))
+
+    while (opcionUsuario != OPCIONSALIR) {
+
+        if (opcionUsuario == OPCIONNUEVOESTUDIANTE) {
+            existeAlumno = false
+            nombreNuevoAlumno = (prompt("Escribe el nombre del alumno que quieres añadir: "))
+
+            for (let i = 0; i < estudiantes.length; i++) {
+
+                if (nombreNuevoAlumno == estudiantes[i]) {
+                    existeAlumno = true
+                }
+            }
+
+            if (existeAlumno == false) {
+                estudiantes.push(nombreNuevoAlumno)
+                calificacion.push(Number(prompt("¿que calificacion tiene " + nombreNuevoAlumno + " ?")))
+
+            } else {
+                console.log("El alumno: " + nombreNuevoAlumno + " ya existe.");
+            }
+
+
+        }
+        else if (opcionUsuario == OPCIONMEDIA) {
+
+            sumaCalificaciones = 0
+            mediaCalificaciones = 0
+
+            for (let i = 0; i < estudiantes.length; i++) {
+                sumaCalificaciones += calificacion[i]
+            }
+            mediaCalificaciones = (sumaCalificaciones / estudiantes.length)
+            console.log("La calificacion media de la clase es: " + mediaCalificaciones.toFixed(2));
+        }
+
+        if (opcionUsuario == OPCIONNOTAMAX) {
+            calificacionMax = 0
+            
+            
+            for (let i = 0; i < calificacion.length; i++) {
+
+                if (calificacion[i] > calificacionMax) {
+
+                    calificacionMax = calificacion[i]
+                    NombreEstudianteMax = estudiantes[i]
+                }
+            }
+            console.log("La nota maxima es de " + NombreEstudianteMax + " con una calificación de " + calificacionMax);
+        }
+        if (opcionUsuario == OPCIONNOTAMIN) {
+            calificacionMin = 10
+            
+            
+            for (let i = 0; i < calificacion.length; i++) {
+
+                if (calificacion[i] < calificacionMin) {
+
+                    calificacionMin = calificacion[i]
+                    NombreEstudianteMin = estudiantes[i]
+                }
+            }
+            console.log("La nota minima es de " + NombreEstudianteMin + " con una calificación de " + calificacionMin);
+        }
+
+        opcionUsuario = Number(prompt("Elige una opcion: "))
+    }
+    console.log("FIN DEL PROGRAMA");
+
+</script>
