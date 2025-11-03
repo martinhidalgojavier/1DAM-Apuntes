@@ -1,0 +1,74 @@
+<script>
+
+    let libreria = ["El señor de los anillos", "Narnia", "Viaje al centro de la tierra", "Resetea tu mente", "One piece"]
+    let cantidadLibros = [8, 2, 1, 5, 10]
+    let opcionElegida
+    let cantidadAniadir
+    let libroElegido
+    let cantidadActualizada
+    let libroNuevo
+    let existeLibro = false
+
+    const ANIADIR = 1
+    const ACTUALIZAR = 2
+    const VERINVENTARIO = 3
+    const SALIR = 4
+
+    console.log("1. AÑADIR LIBROS Y CANTIDAD.");
+    console.log("2. ACTUALIZAR CANTIDAD DE LIBROS.");
+    console.log("3. VER INVENTARIO");
+    console.log("4. SALIR");
+
+
+    opcionElegida = Number(prompt("Elige una opcion: "))
+
+    while (opcionElegida != SALIR) {
+
+        if (opcionElegida == ANIADIR) {
+            existeLibro = false
+            libroNuevo = (prompt("Escribe el Libro que quieres añadir: "))
+
+            for (let i = 0; i < libreria.length; i++) {
+
+                if (libroNuevo == libreria[i]) {
+                    existeLibro = true
+                }
+            }
+
+            if (existeLibro == false) {
+                libreria.push(libroNuevo)
+                cantidadLibros.push(Number(prompt("¿que cantidad añadimos? ")))
+
+            } else {
+                console.log("Ese libro ya existe, elige la opcion 2 para actualizar cantidad.");
+
+            }
+
+
+        }
+        else if (opcionElegida == ACTUALIZAR) {
+            for (let i = 0; i < libreria.length; i++) {
+
+                console.log(i + " - " + libreria[i]);
+            }
+            libroElegido = (Number(prompt("Elige el numero de libro que quieres actualizar: ")))
+            cantidadActualizada = (Number(prompt("¿Cuantas unidades disponibles hay de este libro? ")))
+
+            cantidadLibros[libroElegido] = cantidadActualizada
+
+        }
+        else if (opcionElegida == VERINVENTARIO) {
+
+            for (let i = 0; i < libreria.length; i++) {
+
+                console.log(libreria[i] + " - " + cantidadLibros[i] + " unidades.");
+
+            }
+
+        }
+        opcionElegida = Number(prompt("Elige una opcion: "))
+
+    }
+    console.log("FIN DEL PROGRAMA");
+
+</script>
