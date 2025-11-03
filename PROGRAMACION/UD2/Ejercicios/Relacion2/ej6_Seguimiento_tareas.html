@@ -1,0 +1,70 @@
+<script>
+    // Desarrolla un programa que permita hacer un seguimiento de las tareas diarias de un equipo. 
+    // El programa debe usar dos arrays: uno para almacenar los nombres de las tareas y otro para 
+    // almacenar el estado de cada tarea (*true* = completada y *false* = pendiente). 
+    // El menú del programa debe ofrecer las siguientes opciones:
+
+    // 1. Añadir una nueva tarea.
+    // 2. Marcar una tarea como completada.
+    // 3. Ver la lista de tareas pendientes.
+    // 4. Ver la lista de tareas completadas.
+    // 5. Salir del programa.
+
+    let nombreTareas = []
+    let estadoTareas = []
+    let opcion = ""
+    let nombreTareaIntroducida = ""
+    let estadoTareaIntroducida = ""
+    let listaTareas = ""
+
+    while (opcion != "5") {
+        opcion = prompt("Elige una W\n1. Añadir una nueva tarea\n2. Marcar una tarea como completada\n3. Ver la lista de tareas pendientes\n4. Ver la lista de tareas completadas\n5. Salir del programa.")
+
+        while (opcion != "1" && opcion != "2" && opcion != "3" && opcion != "4" && opcion != "5") {
+            opcion = prompt("Incorrecto. Elige una opción\n1. Añadir una nueva tarea\n2. Marcar una tarea como completada\n3. Ver la lista de tareas pendientes\n4. Ver la lista de tareas completadas\n5. Salir del programa.")
+        }
+        if (opcion == "1") {
+            nombreTareaIntroducida = prompt("Introduce el nombre de la tarea")
+            nombreTareas.push(nombreTareaIntroducida)
+
+            estadoTareaIntroducida = prompt("Introduce el estado de la tarea: " + nombreTareaIntroducida
+                + "\nC(Completada) o P(Pendiente)").toUpperCase()
+
+            while (estadoTareaIntroducida != "C" && estadoTareaIntroducida != "P") {
+                estadoTareaIntroducida = prompt("Introduce el estado de la tarea: " + nombreTareaIntroducida
+                    + "\nC(Completada) o P(Pendiente)").toUpperCase()
+            }
+
+            if (estadoTareaIntroducida == "C") {
+                estadoTareas.push(true)
+            } else if (estadoTareaIntroducida == "P") {
+                estadoTareas.push(false)
+            }
+        } else if (opcion == "2") {
+            nombreTareaIntroducida = prompt("Introduce el nombre de la tarea")
+            for (let i = 0; i < nombreTareas.length; i++) {
+                if (nombreTareas[i] == nombreTareaIntroducida) {
+                    estadoTareas[i] = true
+                }
+            }
+        } else if (opcion == "3") {
+            listaTareas = ""
+            for (let i = 0; i < estadoTareas.length; i++) {
+                if (estadoTareas[i] == false) { // !estadoTareas[i]
+                    listaTareas += nombreTareas[i] + "-"
+                }
+            }
+            console.log(listaTareas);
+
+        } else if (opcion == "4") {
+            listaTareas = ""
+            for (let i = 0; i < estadoTareas.length; i++) {
+                if (estadoTareas[i] == true) { // estadoTareas[i]
+                    listaTareas += nombreTareas[i] + "-"
+                }
+            }
+            console.log(listaTareas);
+        }
+    }
+
+</script>
