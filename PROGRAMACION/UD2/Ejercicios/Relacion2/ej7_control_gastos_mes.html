@@ -1,0 +1,104 @@
+<script>
+
+    let tipoGasto = []
+    let cantidadGasto = []
+
+    const aniadirNuevoGasto = 1
+    const verGastoTotal = 2
+    const gastosAltosYBajos = 3
+    const promedioMes = 4
+    const salir = 5
+    const DIASMES = 30
+
+    let opcionUsuario
+    let nuevoGastoUsuario
+    let cantidadNuevoGastoUsuario
+    let existeGasto = false
+    let posicionCantidadGasto
+    let sumaCantidadAcumulada = 0
+    let gastoMax
+    let gastoMin
+    let posicionTipoGastoMax
+    let posicionTipoGastoMin
+    let sumaGastoTotal
+    let mediaTotalGastos
+
+
+    console.log("1. AÑADIR GASTO Y CANTIDAD.");
+    console.log("2. VER TOTAL GASTOS.");
+    console.log("3. VER GASTO ALTO Y BAJO");
+    console.log("4. VER PROMEDIO GASTO DIARIO (MES) ");
+    console.log("5. SALIR");
+
+    opcionUsuario = Number(prompt("Elige una opcion: "))
+
+    while (opcionUsuario != salir) {
+
+        if (opcionUsuario == aniadirNuevoGasto) {
+            existeGasto = false
+            nuevoGastoUsuario = (prompt("Escribe el gasto que quieres añadir: "))
+
+            for (let i = 0; i < tipoGasto.length; i++) {
+                if (nuevoGastoUsuario == tipoGasto[i]) {
+                    posicionCantidadGasto = i
+                    existeGasto = true
+                }
+            }
+            if (existeGasto == false) {
+                cantidadNuevoGastoUsuario = Number(prompt("¿Cuanto has gastado? "))
+                tipoGasto.push(nuevoGastoUsuario)
+                cantidadGasto.push(cantidadNuevoGastoUsuario)
+
+            } else {
+                cantidadNuevoGastoUsuario = Number(prompt("¿Cuanto has gastado? "))
+                sumaCantidadAcumulada = cantidadGasto[posicionCantidadGasto] + cantidadNuevoGastoUsuario
+                cantidadGasto[posicionCantidadGasto] = sumaCantidadAcumulada
+            }
+
+        }
+        else if (opcionUsuario == verGastoTotal) {
+
+            for (let i = 0; i < tipoGasto.length; i++) {
+
+                console.log(tipoGasto[i] + " - " + cantidadGasto[i] + " €");
+
+            }
+
+
+        }
+        else if (opcionUsuario == gastosAltosYBajos) {
+            gastoMax = 0
+            gastoMin = cantidadGasto[0]
+
+            for (let i = 0; i < cantidadGasto.length; i++) {
+
+                if (cantidadGasto[i] > gastoMax) {
+                    posicionTipoGastoMax = i
+                    gastoMax = cantidadGasto[i]
+                }
+                if (cantidadGasto[i] <= gastoMin) {
+                    posicionTipoGastoMin = i
+                    gastoMin = cantidadGasto[i]
+                }
+
+            }
+            console.log("El gasto mas alto es: " + tipoGasto[posicionTipoGastoMax] + " - " + gastoMax + " €");
+            console.log("El gasto mas bajo es: " + tipoGasto[posicionTipoGastoMin] + " - " + gastoMin + " €");
+
+        }
+        else if (opcionUsuario == promedioMes) {
+
+            for (let i = 0; i < cantidadGasto.length; i++) {
+                sumaCantidadAcumulada += cantidadGasto[i]
+            }
+
+            mediaTotalGastos = (sumaCantidadAcumulada / DIASMES)
+            console.log("La media de gasto diario es: " + mediaTotalGastos.toFixed(2) + " €");
+
+        }
+
+        opcionUsuario = Number(prompt("Elige una opcion: "))
+    }
+    console.log("FIN DEL PROGRAMA");
+
+</script>
