@@ -1,0 +1,66 @@
+<script>
+
+let cliente = []
+let cantidadClientes = []
+
+    const ANIADIRNUEVARESERVA = 1
+    const VERRESERVAS = 2
+    const TOTALPERSONASRESERVADAS = 3
+    const CANCELARRESERVA = 4
+    const SALIR = 5
+
+    let opcionUsuario
+    let totalComensales = 0
+    let nombreCancelar
+
+    console.log("1. HACER UNA RESERVA.");
+    console.log("2. VER RESERVAS.");
+    console.log("3. VER TOTAL DE COMENSALES.");
+    console.log("4. CANCELAR RESERVA EXISTENTE");
+    console.log("5. SALIR");
+
+    opcionUsuario = Number(prompt("Elige una opcion: "))
+
+    while (opcionUsuario != SALIR) {
+
+        if (opcionUsuario == ANIADIRNUEVARESERVA) {
+
+            cliente.push(prompt("Introduzca su nombre: "))
+            cantidadClientes.push(Number(prompt("¿Cuanta gente será en total? ")))
+        }
+        else if (opcionUsuario == VERRESERVAS) {
+            
+            for (let i = 0; i < cliente.length; i++) {
+                console.log(cliente[i]);
+                
+                
+            }
+        }
+        else if (opcionUsuario == TOTALPERSONASRESERVADAS) {
+            
+            for (let i = 0; i < cantidadClientes.length; i++) {
+                totalComensales += cantidadClientes[i]               
+            }
+            console.log("Hoy vienen a comer: " + totalComensales + " personas.");
+            
+        }
+        else if (opcionUsuario == CANCELARRESERVA) {
+            
+            nombreCancelar = prompt("Introduzca su nombre para cancelar reserva: ")
+            for (let i = 0; i < cliente.length; i++) {
+                
+                if (nombreCancelar == cliente[i]) {
+                    cliente.splice(i,1)
+                    cantidadClientes.splice(i,1)
+                }
+                
+            }
+
+        }
+
+    opcionUsuario = Number(prompt("Elige una opcion: "))
+    }
+    console.log("FIN DEL PROGRAMA");
+
+
+</script>
