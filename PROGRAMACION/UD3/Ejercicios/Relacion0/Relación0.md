@@ -167,6 +167,18 @@ console.log(area)
 Crea una función llamada `sumarArray` que reciba un array de números y devuelva la suma de todos sus elementos.
 
 ```javascript
+    function sumarArray(numerosASumar) {
+        let totalSuma = 0
+
+        for (const numeroDelArray of numerosASumar) {
+            totalSuma += numeroDelArray            
+        }
+        return totalSuma
+    }
+    //-------------------MAIN-----------------
+    let numerosDel10Al1 = [10,9,8,7,6,5,4,3,2,1,10]
+    let total = sumarArray(numerosDel10Al1)
+    alert(total)
 
 ```
 
@@ -174,6 +186,24 @@ Crea una función llamada `sumarArray` que reciba un array de números y devuelv
 Crea una función llamada `obtenerImpares` que reciba un array y devuelva un nuevo array con los números impares.
 
 ```javascript
+    function obtenerImpares(arrayParametro) {
+        let numerosImpares = []
+        for (const elemento of arrayParametro) {
+            if (elemento % 2 != 0) {
+                numerosImpares.push(elemento)
+            }
+        }
+        return numerosImpares
+    }
+
+
+    let numerosDel1Al10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    console.log(obtenerImpares(numerosDel1Al10))
+
+    // O 
+    // let resultado = obtenerImpares(numerosDel1Al10)
+    // console.log(resultado)
+
 ```
 
 ## 13. **Invertir un array**  
@@ -208,23 +238,96 @@ Crea una función llamada `verificarNumeroEnArray` que reciba un número y un ar
 Crea una función llamada `revertirCadena` que reciba una cadena de texto y devuelva la misma cadena con los caracteres en orden inverso.
 
 ```javascript
+    function revertirCadena(cadenaTexto) {
+        let cadenaTextoInversa = ""
+        for (let i = cadenaTexto.length; i > 0; i--) {
+            cadenaTextoInversa += cadenaTexto[i - 1]
+        }
+        return cadenaTextoInversa
+    }
+
+    //------------------MAIN----------------------
+    let cadenaUsuario = prompt("Introduce una cadena a revertir")
+    alert(revertirCadena(cadenaUsuario))
+
+
 ```
 
 ## 18. **Contar vocales en una cadena**  
 Crea una función llamada `contarVocalesEnCadena` que reciba una cadena de texto y devuelva la cantidad total de vocales que contiene.
 
 ```javascript
+
+    function contarVocalesEnCadenaForI(cadena) {
+        cadena = cadena.toUpperCase()
+        let cantidadTotalVocales = 0
+        for (let i = 0; i < cadena.length; i++) {
+            if (cadena[i] == "A" || cadena[i] == "E" || cadena[i] == "I" || cadena[i] == "O" || cadena[i] == "U") {
+                cantidadTotalVocales++
+            }
+        }
+        return cantidadTotalVocales
+    }
+
+    function contarVocalesEnCadenaForOf(cadena) {
+        cadena = cadena.toUpperCase()
+        let cantidadTotalVocales = 0
+        for (let letra of cadena) {
+            if (letra == "A" || letra == "E" || letra == "I" || letra == "O" || letra == "U") {
+                cantidadTotalVocales++
+            }
+        }
+        
+        return cantidadTotalVocales
+    }
+
+    //--------------MAIN--------------
+
+    let cadenaTexto = "MURCIELAGO GALLEGO".toUpperCase()
+    let numeroVocales = contarVocalesEnCadenaForI(cadenaTexto)
+    let numeroVocales = contarVocalesEnCadenaForOf(cadenaTexto)
+    alert(numeroVocales)
 ```
 
 ## 19. **Capitalizar la primera letra de una palabra**  
 Crea una función llamada `capitalizarPrimeraLetra` que reciba una palabra y devuelva la misma palabra con la primera letra en mayúscula. Investiga el uso de `toUpperCase()`.
 
 ```javascript
+    function capitalizarPrimeraLetra(palabra) {
+        let palabraCapitalizada = ""
+
+        for (let i = 0; i < palabra.length; i++) {
+            if (i == 0) {
+                palabraCapitalizada += palabra[i].toUpperCase()
+            }
+            else {
+                palabraCapitalizada += palabra[i]
+            }
+        }
+        return palabraCapitalizada
+    }
+
+    alert(capitalizarPrimeraLetra("jaime"))
 ```
 
 ## 20. **Contar palabras en una cadena**  
 Crea una función llamada `contarPalabrasEnCadena` que reciba una cadena y devuelva el número de palabras que contiene, asumiendo que están separadas por espacios. Investiga el uso de `split()`.
 
 ```javascript
+    function contarPalabrasEnCadena(cadena) {
+        let palabrasSeparadas = cadena.split(' ')
+        let numeroPalabras = palabrasSeparadas.length
+        return numeroPalabras
+    }
 
+    function contarPalabrasEnCadenaOptimizado(cadena) {
+        //NO HACER OPERACIONES EN UN RETURN
+        //Solucion mejor:
+        // let numeroPalabras = cadena.split(' ').length
+        // return numeroPalabras
+        return cadena.split(' ').length
+    }
+
+
+    alert(contarPalabrasEnCadena("ESTO ES UNA CADENA CON PALABRAS GUILLERMO"))
 ```
