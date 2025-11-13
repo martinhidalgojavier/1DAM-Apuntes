@@ -25,7 +25,6 @@
         let tiradasConsecutivas = 0
         let historialDeTiradas = []
         let ladoMoneda = ""
-        let resultadoFinal = [tiradasConsecutivas, historialDeTiradas]
         while (contadorDeCaras != 3) {
             ladoMoneda = caraOCruz()
             tiradasConsecutivas++
@@ -36,6 +35,7 @@
             }
             historialDeTiradas.push(ladoMoneda)
         }
+        let resultadoFinal = [tiradasConsecutivas, historialDeTiradas]
         return resultadoFinal
     }
 
